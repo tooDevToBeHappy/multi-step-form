@@ -1,0 +1,108 @@
+@import './mixin';
+@import './sidebar';
+@import './step1';
+@import './step2';
+@import './step3';
+@import './step4';
+@import './step5';
+$Marine-blue: hsl(213, 96%, 18%);
+$Purplish-blue: hsl(243, 100%, 62%);
+$Pastel-blue: hsl(228, 100%, 84%);
+$Light-blue: hsl(206, 94%, 87%);
+$Strawberry-red: hsl(354, 84%, 57%);
+
+$Cool-gray: hsl(231, 11%, 63%);
+$Light-gray: hsl(229, 24%, 87%);
+$Magnolia: hsl(217, 100%, 97%);
+$Alabaster: hsl(231, 100%, 99%);
+$White: hsl(0, 0%, 100%);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Ubunto , sans-serif;
+    background-color: $White;
+    padding: 10px;
+}
+h5[step-title]{
+    @include reg-header(20px,5px 0);
+    color: black;
+}
+p[step-paragraph]{
+    @include reg-paragraph(15px,10px 0 0 0);
+    color: hsl(231, 11%, 63%);
+}
+.forms{
+    width: 600px;
+}
+.nxt{
+    @include nxt-step();
+    position: absolute;
+    right: 70px;
+    bottom: 30px;
+}
+.bck{
+    @include bck();
+    position: absolute;
+    left: 70px;
+    bottom: 30px;
+    display: none;
+}
+.nxt:active,
+.bck:active{
+    transform: scale(0.95);
+}
+main{
+    background-color: $Light-blue;
+}
+@media (max-width:599px){
+    body{
+        padding: 0%;
+    }
+    main{
+        padding: 0;
+        display: block;
+        width: 100vw;
+        height: 525px;
+        position: relative;
+        margin: auto;
+    }
+    .steps{
+        position: absolute;
+        width: 90%;
+        padding: 30px 20px;
+        border-radius: 10px;
+        top: 100px;
+        left: 5%;
+        background-color: hsl(0, 0%, 100%);
+    }
+    .nxt{
+        right: 5%;
+        bottom: -60px;
+    }
+    .bck{
+        left: 5%;
+        bottom: -60px;
+    }
+}
+@media (min-width:600px){
+    body{
+        background-color: $Magnolia;
+    }
+    main{
+        padding: 20px;
+        border-radius: 8px;
+        margin: auto;
+        margin-top: 50px;
+        background-color: hsl(231, 100%, 99%);
+        width: 900px;
+        height: 640px;
+        display: flex;
+    }
+    .forms{
+        position: relative
+    }
+}

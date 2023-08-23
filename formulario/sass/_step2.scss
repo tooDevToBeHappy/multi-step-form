@@ -1,0 +1,140 @@
+.steps.s2{
+    display:none;
+}
+.planType.selected{
+    border: 2px solid hsl(243, 100%, 62%);
+    transform: scale(1.05);
+    background-color: hsla(243, 100%, 70%, 0.051);
+}
+.planType:hover{
+    background-color: rgba(194, 192, 248, 0.105);
+}
+.sliderPointer.sliderClick{
+    right:5px;
+}
+.slider{
+    width: 250px;
+    height: 25px;
+    margin: auto;
+    margin-top: 50px;
+    @include flex(center,space-around);
+    p{
+        @include flex(center,center);
+        width: 70px;
+        height: 20px;
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    #monthly{color: black;}
+    .sliderBody{
+        display: block;
+        height: inherit;
+        width: 50px;
+        padding: 5px;
+        background-color: hsl(213, 96%, 18%);
+        border-radius: 20px;
+        position: relative;
+    }
+    .sliderPointer{
+        width: 15px;
+        height: 15px;
+        background-color: white;
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        transition: .4s;
+        left: 5px;
+    }
+}
+.planType{
+    border: 2px solid black;
+    width: 135px;
+    height: 200px;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    transition: .2s;
+    h5{
+        font-size: 16px;
+    }
+    P{
+        font-size: 13px;
+    }
+    p:after{
+        content: '2 months free';
+        display: block;
+        color: black;
+        position: absolute;
+        bottom: 20px;
+    }
+}
+@media (max-width:599px){
+    .steps.s2{
+        height: 410px;
+    }
+    .planTypeRow{
+        display: block;
+    }
+    .planType{
+        width: 100%;
+        height: 70px;
+        margin-top: 10px;
+        @include flex(center,flex-start);
+        flex-direction: column;
+        position: relative;
+        font-size: 1rem;
+        img{
+            position: absolute;
+            left: 5%;
+            top: 15px;
+        }
+        h5{
+            width: 80px;
+            margin-top: -6px;
+            margin-left: -40px;
+        }
+        p{
+            @include reg-paragraph(13px,5px 0);
+            width: 80px;
+            margin-left: -40px;
+            color: hsl(231, 11%, 63%);
+        }
+        p::after{
+            display: none;
+        }
+    }
+    .slider{
+        margin-top: 20px;
+        color: hsl(231, 11%, 63%);
+    }
+}
+@media (min-width:600px){
+    .steps.s2{
+        @include reg-step();
+        h5{
+            @include reg-header(28px,5px 0);
+            color: black;
+        }
+        P{
+            @include reg-paragraph(15px,10px 0 0 0);
+            color: hsl(231, 11%, 63%);
+        }
+        .planTypeRow{
+            @include flex(center,space-between);
+            width: 100%;
+            margin-top: 20px;
+        }
+        .planType{
+            h5{
+                @include reg-header(18px,5px 0);
+                color: black;
+                margin-top: 45px
+            }
+            p{
+                @include reg-paragraph(14px,10px 0 0 0);
+                color: hsl(231, 11%, 63%);
+            }
+        }
+    }
+}

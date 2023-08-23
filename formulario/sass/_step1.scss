@@ -1,0 +1,101 @@
+.steps.s1{
+    display: block;
+    label{
+        display: block;
+        margin-top: 20px;
+        font-weight: 300;
+        font-size: 14px;
+    }
+    input{
+        display: block;
+        margin-top: 10px;
+        height: 50px;
+        padding-left: 15px;
+        width: 100%;
+        border-radius: 7px;
+        color:black;
+        border:1px solid  hsl(229, 24%, 87%);
+        outline: none;
+        font-weight: 500;
+        font-size: 13px;
+        cursor: pointer;
+    }
+    input:hover{
+        border: 1px solid hsl(213, 96%, 18%);
+    }
+}
+.infoForm{
+    position: relative;
+}
+.required{
+    position: absolute;
+    right: 5px;
+    color: red;
+    font-weight: 700;
+}
+.required.none{
+    display: none;
+}
+@media (max-width:599px){
+    .steps.s1{
+        height:340px;
+        h5{
+            @include reg-header(20px,5px 0);
+            color: black;
+        }
+        P{
+            @include reg-paragraph(15px,10px 0 0 0);
+            color: hsl(231, 11%, 63%);
+        }
+        label{
+            margin-top: 15px;
+        }
+        input{
+            margin-top: 2px;
+            height: 30px;
+            border-radius: 3px;
+        }
+    }
+    .infoForm{
+        .required:nth-child(2){
+            font-size: 14px;
+            top:2px;
+        }
+        .required:nth-child(5){
+            font-size: 14px;
+            top:66px;
+        }
+        .required:nth-child(8){
+            font-size: 14px;
+            top:130px;
+        }
+    }
+}
+@media (min-width:600px){
+    .steps.s1{
+        @include reg-step();
+        h5{
+            @include reg-header(28px,5px 0);
+            color: black;
+        }
+        P{
+            @include reg-paragraph(15px,10px 0 0 0);
+            color: hsl(231, 11%, 63%);
+        }
+        .infoForm{
+            margin-top: 50px;
+            .required:nth-child(2){
+                font-size: 14px;
+                top:10px;
+            }
+            .required:nth-child(5){
+                font-size: 14px;
+                top:105px;
+            }
+            .required:nth-child(8){
+                font-size: 14px;
+                top:200px;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@mixin reg-header($size,$mar){
+    font-size: $size;
+    margin: $mar;
+    color: hsl(228, 100%, 84%);
+}
+@mixin reg-paragraph($size,$mar){
+    font-size: $size;
+    margin: $mar;
+    color: hsl(0, 0%, 100%);
+}
+@mixin flex($align:center,$justfy:center){
+    display: flex;
+    align-items: $align;
+    justify-content: $justfy;
+}
+@mixin reg-step{
+    padding: 30px 80px ;
+}
+@mixin nxt-step(){
+    border: none;
+    font-size: 16px;
+    padding: .8rem 1.3rem;
+    background-color:hsl(213, 96%, 18%) ;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+@mixin bck(){
+    font-size: 16px;
+    background-color: hsl(231, 100%, 99%);
+    border: none;
+    padding: .8rem 1.3rem;
+    color: hsl(231, 11%, 63%);
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}

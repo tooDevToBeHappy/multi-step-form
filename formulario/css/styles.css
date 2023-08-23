@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  hsl(231, 100%, 99%);
+}
+main{
+    margin:5% auto;
+}
+.sidebar{
+    border-radius: 8px;
+}
+.sidebar .span{
+    background-color: hsl(231, 100%, 100%);
+    color: #000;
+}
+.span.active{
+    color:red;
+    background-color: #000;
+}
+@media (min-width:600px){
+    main{
+        display: flex;
+    }
+    .sidebar{
+        width: 250px;
+        height: 600px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('/assets/bg-sidebar-desktop.svg');
+        padding: 25px;
+    }
+    .showStepNumber{
+        margin-top: 30px;
+        width: 200px;
+        display: flex;
+        align-items:center ;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .showStepNumber .span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px;
+        border-radius: 50%;
+        font-weight: 900;
+        margin-bottom: 10px;
+        position:relative ;
+        z-index:99;
+    }
+    .showStepNumber p{
+        color: hsl(231, 100%, 100%);
+    }
+}

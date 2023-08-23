@@ -1,0 +1,114 @@
+.steps.s4{
+    display: none;
+}
+.nxt.confirm{
+    border: none;
+    font-size: 14px;
+    padding: .8rem 1.3rem;
+    background-color:hsl(243, 100%, 62%);
+    color: #fff;
+    border-radius: 5px;
+    letter-spacing: .05cm;
+}
+.addedFeatures{
+    @include flex(center,space-between);
+}
+.addedFeatures.none{
+    display: none;
+}
+.billAssets{
+    display: block;
+    margin-top: 40px;
+    background-color: hsl(217, 100%, 97%);
+    border-radius: 7px;
+    width: 350px;
+    height: 175px;
+
+    .billheader{
+        height: 60px;
+        padding: 10px 20px;
+        position: relative;
+        h5{
+            @include reg-paragraph(15px,0);
+            color: black;
+            font-weight: 300
+        }
+        a{
+            @include reg-paragraph(12px,0);
+            color: hsl(231, 11%, 63%);
+        }
+        span{
+            position: absolute;
+            right: 30px;
+        }
+    }
+    .billheader::after{
+        content: '';
+        margin-top: 10px;
+        display: block;
+        position: absolute;
+        border:1px solid hsl(231, 11%, 63%);
+    }
+}
+.addedFeatures{
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    padding: 0 20px;
+    h5{
+        font-size: 14px;
+        color: hsl(231, 11%, 63%);
+    }
+    p{
+        color: black;
+    }
+}
+.billFooter{
+    width:350px;
+    @include flex(center,space-between);
+    padding: 0 20px;
+    margin-top: 10px;
+    h5{
+        font-size: 14px;
+        color: hsl(231, 11%, 63%);
+    }
+    p{
+        color: hsl(243, 100%, 62%);
+        font-size: 20px;
+    }
+}
+@media (max-width:599px){
+    .billAssets{
+        width: 100%;
+    }
+    .billheader::after{
+        width: 255px;
+    }
+    .billFooter{
+        width: 100%;
+    }
+}
+@media (min-width:600px){
+    .steps.s4{
+        @include reg-step();
+    }
+    .billAssets{
+        width: 400px;
+        height: 250px;
+    }
+    .billheader::after{
+        width: 360px;
+    }
+    .billFooter{
+        width:400px;
+        @include flex(center,space-between);
+        padding: 0 20px;
+        margin-top: 10px;
+        h5{
+            font-size: 14px;
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.steps.s5{
+    display: none;
+}
+.steps.s5{
+    text-align: center;
+    img{
+        margin: auto;
+        display: block;
+    }
+    h5{
+        @include reg-header(28px,5px 0);
+        color: black;
+    }
+    P{
+        @include reg-paragraph(15px,10px 0 0 0);
+        color: hsl(231, 11%, 63%);
+    }
+}
+@media (max-width:599px){
+    .steps.s5{
+        height: 400px;
+        padding: 20px;
+        img{
+            margin-top: 20px;
+        }
+        h5{
+            margin-top: 20px;
+        }
+    }
+}
+@media (min-width:600px){
+    .steps.s5{
+        padding: 90px;
+        img{
+            margin-top: 70px;
+        }
+        h5{
+            margin-top: 30px;
+        }
+        p{
+            margin-top: 10px;
+            line-height: 18px;
+        }
+    }
+}
